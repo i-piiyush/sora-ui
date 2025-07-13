@@ -4,6 +4,8 @@ import { TbBrandGithub } from "react-icons/tb";
 import { Twirl as Hamburger, Twirl } from "hamburger-react";
 import { CiSearch } from "react-icons/ci";
 import OnSearch from "./OnSearch";
+import Sidebar from "./Sidebar";
+import MainContent from "./MainContent";
 
 const Components = () => {
   const [ search, setSearch ] = useState(false);
@@ -28,8 +30,8 @@ const Components = () => {
   const STAGGER = 0.025;
   const DURATION = 0.25;
   return (
-    <div className="text-zinc-50 tracking-tight w-full h-screen px-10 py-3 relative">
-      <nav className=" w-full py-5 flex justify-between items-center sticky top-0 left-0 z-50">
+    <div className="text-zinc-50 tracking-tight w-full h-screen px-10 py-3 relative sl">
+      <nav className=" w-full py-5 flex justify-between items-center sticky top-0 left-0 z-50 shadow-2x">
         <motion.div
           initial="initial"
           whileHover="hovered"
@@ -103,7 +105,7 @@ const Components = () => {
         </div>
 
         {/* star on github */}
-        <motion.a whileTap={{scale:0.9,rotate:2}} className="h-12 w-48 bg-[linear-gradient(90deg,_rgba(255,255,255,1)_0%,_rgba(123,241,168,1)_50%)] text-zinc-900 rounded-full md:flex justify-between items-center px-1 py-3 pl-4 hidden cursor-pointer " href="#" target="_blank">
+        <motion.a whileTap={{scale:0.9,rotate:2}} className="h-12 w-48 bg-[linear-gradient(90deg,_rgba(255,255,255,1)_0%,_rgba(123,241,168,1)_50%)] text-zinc-900 rounded-full md:flex justify-between items-center px-1 py-3 pl-4 hidden cursor-pointer " href="https://github.com/i-piiyush/sora-ui" target="_blank">
           <h1 className="pointer-events-none " >star on GitHub</h1>
           <span className="h-11 w-11 rounded-full bg-zinc-900 flex items-center cursor-pointer justify-center text-white">
             <TbBrandGithub size="1.5rem" />{" "}
@@ -113,7 +115,13 @@ const Components = () => {
       {search && <OnSearch closeSearch={()=>{
         setSearch(false)
       }}/>}
-      <h1>lmao</h1>
+
+      <div className="md:flex py-5 w-full">
+        <Sidebar />
+        <MainContent />
+
+      </div>
+      
     </div>
   );
 };
