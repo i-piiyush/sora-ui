@@ -2,7 +2,7 @@ import React from 'react'
 
 const Demo = () => {
   return (
-    <div className='bg-zinc-300 w-[90%] rounded-2xl text-black h-[30rem]'>Demo</div> 
+    <div className='bg-zinc-300 w-full rounded-2xl text-black h-[30rem]'>Demo</div> 
   )
 }
 

@@ -9,6 +9,7 @@ import MainContent from "./MainContent";
 
 const Components = () => {
   const [ search, setSearch ] = useState(false);
+  const [toggle,setToggle] = useState(false)
   useEffect(()=>{
     const handleKeyDown = (e)=>{
         if((e.ctrlKey || e.metaKey) && e.key ==="k"){
@@ -30,8 +31,8 @@ const Components = () => {
   const STAGGER = 0.025;
   const DURATION = 0.25;
   return (
-    <div className="text-zinc-50 tracking-tight w-full h-screen px-10 py-3 relative sl">
-      <nav className=" w-full py-5 flex justify-between items-center sticky top-0 left-0 z-50 shadow-2x">
+    <div className="text-zinc-50  tracking-tight w-full h-screen   relative z-50 ">
+      <nav className=" w-full bg-zinc-950 py-5 flex justify-between items-center sticky top-0 left-0 z-50  px-10">
         <motion.div
           initial="initial"
           whileHover="hovered"
@@ -85,6 +86,7 @@ const Components = () => {
             placeholder="search components..."
             className="border border-green-50/40 border-r-0 h-12 rounded-tl-full rounded-bl-full  px-5 outline-none placeholder:text-green-300/50 placeholder:font-light w-56"  onClick={() => {
               setSearch(!search);
+              setToggle(false)
             }}
           />
           <span className=" h-12 rounded-tr-full rounded-br-full border border-green-50/40 border-l-0 w-28 flex justify-end  px-1 items-center">
@@ -101,7 +103,10 @@ const Components = () => {
               setSearch(!search);
             }}
           />
-          <Twirl size={28} />
+          <Twirl size={28} onToggle={()=>{
+            setToggle(!toggle)
+            setSearch(false)
+          }} />
         </div>
 
         {/* star on github */}
@@ -116,8 +121,9 @@ const Components = () => {
         setSearch(false)
       }}/>}
 
-      <div className="md:flex py-5 w-full">
-        <Sidebar />
+      <div className="md:flex py-5 px-10 bg-zinc-900 w-full">
+        
+        <Sidebar toggle={toggle} />
         <MainContent />
 
       </div>

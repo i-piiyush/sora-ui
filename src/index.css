@@ -6,3 +6,6 @@
   font-family: "inter";
 }
 
+nav{
+  filter: drop-shadow(10px 31px 22px #000000);
+}
