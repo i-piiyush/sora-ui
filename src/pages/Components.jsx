@@ -3,9 +3,9 @@ import { hover, motion, scale, stagger } from "motion/react";
 import { TbBrandGithub } from "react-icons/tb";
 import { Twirl as Hamburger, Twirl } from "hamburger-react";
 import { CiSearch } from "react-icons/ci";
-import OnSearch from "./OnSearch";
-import Sidebar from "./Sidebar";
-import MainContent from "./MainContent";
+import OnSearch from "../components/OnSearch";
+import Sidebar from "../components/Sidebar";
+import MainContent from "../components/MainContent";
 
 const Components = () => {
   const [ search, setSearch ] = useState(false);

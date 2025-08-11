@@ -21,7 +21,7 @@ window.addEventListener("keydown",(e)=>{
     return () => window.removeEventListener("mousedown", handleClickOutside);
   }, [closeSearch]);
   return (
-    <div className="w-full h-screen overflow-hidden backdrop-blur-sm  absolute top-0 left-0 z-40 flex justify-between items-center">
+    <div className="w-full h-screen overflow-hidden backdrop-blur-sm bg-black/70  absolute top-0 left-0 z-40 flex justify-between items-center">
       <motion.div
         className="flex  w-full h-full justify-center items-center"
         ref={containerRef}

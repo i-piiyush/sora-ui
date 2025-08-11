@@ -1,4 +1,5 @@
-import Components from "./pages/Components"
+
+import AppRouter from "./routes/AppRouter"
 
 function App() {
   
@@ -6,7 +7,7 @@ function App() {
   return (
    
      <div>
-      <Components />
+      <AppRouter />
      </div>
     
   )

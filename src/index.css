@@ -9,3 +9,11 @@
 nav{
   filter: drop-shadow(10px 31px 22px #000000);
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
