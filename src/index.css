@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 @import "tailwindcss";
 
 * {
@@ -16,4 +17,7 @@ nav{
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+.codebox {
+  font-family: 'Fira Code';
 }
